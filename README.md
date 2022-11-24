@@ -16,7 +16,7 @@ Transformation of the extracted methylations happens through a Python Script whi
 the bash script above:
 
 ````
-    usage:  methylation_transformation.py
+    usage:  {home}/src/methylation_transformation.py
     -o path2out
     
     This script extracts methylation information from a bam file Required: -
