@@ -17,7 +17,7 @@ Help() {
   # Display Help
   echo -e "\n";
   echo "Script to extract methylation"
-  echo "Syntax: $0 [-o|-i]";
+  echo "Syntax: $0 [-o|-i|f|n||r|h]";
   echo "options:";
   echo "-o    absolute path to output files. Required=true";
   echo "-i    absolute directory path to input files. Required=true";
@@ -35,6 +35,17 @@ Help() {
 ########################################################################################################################
 # Process the input options. Add the options as needed                                                                 #
 ########################################################################################################################
+
+get_bash_script_directory() {
+
+  ABS_DIR_PATH_CURRENT_RUNNING_SCRIPT="$(dirname "$(realpath "$0")")";
+  PARENT_DIR_ALL_SCRIPTS="$(dirname "$ABS_DIR_PATH_CURRENT_RUNNING_SCRIPT")";
+
+  echo "$PARENT_DIR_ALL_SCRIPTS";
+
+}
+
+ABS_DIR_PATH_TO_PYTHON_SCRIPT="$(get_bash_script_directory)"/"src/methylation_transformer.py";
 
 REMOVE_PATH="false";  #DEFAULT_REMOVE_PATH
 NUMBER_CPU=4;
@@ -103,14 +114,16 @@ generate_bed_graph_files() {
 
   }
 
-concatenate_all_bed_graph_files() {
+transform_bed_graph_files() {
 
+  python "$ABS_DIR_PATH_TO_PYTHON_SCRIPT" -o "$PATH_TO_OUT_DIRECTORY" -i "$ABS_DIR_PATH_TO_INPUT" -n 2
 }
 
 main() {
 
   check_mandatory_cli_arguments;
   generate_bed_graph_files;
+  transform_bed_graph_files;
 
 }
 

@@ -4,7 +4,7 @@ import os.path
 
 import pandas as pd
 
-from src.package.datastructureoperations.listoperations.listhandlers import list_is_not_empty
+from package.datastructureoperations.listoperations.listhandlers import list_is_not_empty
 
 
 class DataFrameWriter:

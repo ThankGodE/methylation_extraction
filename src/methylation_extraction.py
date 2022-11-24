@@ -19,13 +19,13 @@ import os.path
 
 # Futures local application libraries, source package
 from addscriptdir2path import add_package2env_var
-from src.package.commandlineoperations.commandlineoperator import CommandLineOperator
-from src.package.dataframeoperations.write_out_dataframes import DataFrameWriter
-from src.package.fileoperations.filehandlers import FileHandler
-from src.package.lateralprocessing.parallelprocessing import synchronize_processes_pathos
-from src.package.logprocesses.logprocesses import change_logging_format
-from src.package.methylationextractionoperations.methylationextractionoperations import extract_methylations
-from src.package.profiling.profiling import begin_profiling, end_profiling, ProfileLogger
+from package.commandlineoperations.commandlineoperator import CommandLineOperator
+from package.dataframeoperations.write_out_dataframes import DataFrameWriter
+from package.fileoperations.filehandlers import FileHandler
+from package.lateralprocessing.parallelprocessing import synchronize_processes_pathos
+from package.logprocesses.logprocesses import change_logging_format
+from package.methylationextractionoperations.methylationextractionoperations import extract_methylations
+from package.profiling.profiling import begin_profiling, end_profiling, ProfileLogger
 
 # re-define system path to include modules, packages,
 # and libraries in environment variable

@@ -1,7 +1,7 @@
 """ a collection of classes to work on a dataframe"""
 import pandas as pd
 
-from src.package.datastructureoperations.listoperations.listhandlers import get_first_element
+from package.datastructureoperations.listoperations.listhandlers import get_first_element
 
 
 class DataFrameOperator:

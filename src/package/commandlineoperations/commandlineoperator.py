@@ -9,7 +9,7 @@ import argparse
 import logging
 from argparse import Namespace
 
-from src.package.logprocesses.logprocesses import change_logging_format
+from package.logprocesses.logprocesses import change_logging_format
 
 # Futures local application libraries, source package
 # from logprocesses.logprocesses import change_logging_format

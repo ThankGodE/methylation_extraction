@@ -9,8 +9,8 @@ import pathlib
 
 import pandas as pd
 
-from src.package.dataframeoperations.dataframeoperation import DataFrameOperator
-from src.package.fileoperations.fileprocessing import FileReader
+from package.dataframeoperations.dataframeoperation import DataFrameOperator
+from package.fileoperations.fileprocessing import FileReader
 
 
 # system modules, packages, libraries, and programs ###
