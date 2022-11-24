@@ -21,7 +21,9 @@ import sys
 # Futures local application libraries, source package
 from addscriptdir2path import add_package2env_var
 from src.package.commandlineoperations.commandlineoperator import CommandLineOperator
+from src.package.dataframeoperations.write_out_dataframes import DataFrameWriter
 from src.package.fileoperations.filehandlers import FileHandler
+from src.package.lateralprocessing.parallelprocessing import synchronize_processes_pathos
 from src.package.logprocesses.logprocesses import change_logging_format
 from src.package.methylationextractionoperations.methylationextractionoperations import extract_methylations
 from src.package.profiling.profiling import begin_profiling, end_profiling, ProfileLogger
@@ -50,24 +52,15 @@ def main() -> None:
     assert (os.path.exists(path_to_bam_files) and os.path.isdir(path_to_bam_files)), "supply an absolute path " \
                                                                                      "directory to -i"
 
-    all_bam_files = FileHandler.globally_get_all_files(path_to_bam_files, "_CpG.bedGraph")
+    all_bed_graph_files = FileHandler.globally_get_all_files(path_to_bam_files, "_CpG.bedGraph")
 
-    extract_methylations(all_bam_files[0])
-    sys.exit()
+    extracted_methylation_dataframe_df = synchronize_processes_pathos(
+        extract_methylations,
+        all_bed_graph_files,
+        number_cpus,
+    )
 
-    extracted_df = [extract_methylations(filepath) for filepath in all_bam_files]
-
-    # extracted_methylation_dataframe_df = synchronize_processes_pathos(
-    #     extract_methylations,
-    #     all_bam_files,
-    #     number_cpus,
-    # )
-    #
-    # concatenate_write_df(
-    #     extracted_methylation_dataframe_df, output_dir, annot_type
-    # )
-
-    print(path_to_out_file, all_bam_files, "Yess")
+    DataFrameWriter.write_dataframe(extracted_methylation_dataframe_df, path_to_out_file )
 
 
 ###################################################################################

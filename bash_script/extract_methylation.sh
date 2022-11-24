@@ -98,11 +98,14 @@ generate_bed_graph_files() {
 
     MethylDackel extract "$REFERENCE_GENOME" "$ABSOLUTE_PATH_TO_BAM_FILE"
 
-#    samtools view -h "$ABSOLUTE_PATH_TO_BAM_FILE" > "${ABSOLUTE_PATH_TO_SAM_FILE}";
 
   done;
 
   }
+
+concatenate_all_bed_graph_files() {
+
+}
 
 main() {
 

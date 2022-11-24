@@ -24,7 +24,4 @@ def synchronize_processes_pathos(
             function_pathos, tasks2process_pathos
         )
 
-    print(function_pathos, tasks2process_pathos, num_cpus2process_pathos)
-
-
-    return synchronization_output
+        return synchronization_output
