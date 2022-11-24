@@ -31,7 +31,8 @@ def extract_methylations(absolute_path2sam_file: str) -> pd.DataFrame:
     bed_file_content_renamed_df = DataFrameOperator.rename_dataframe(bed_file_content_df)
     sample_name_reference_df = DataFrameOperator.add_sample_name_column(base_filename, bed_file_content_renamed_df)
 
-    print( sample_name_reference_df )
+    print( sample_name_reference_df, "" )
+
     sys.exit()
 
     return base_filename
