@@ -12,7 +12,8 @@ options:
 ````
 
 
-Transformation of the extracted methylations happens through a Python Script:
+Transformation of the extracted methylations happens through a Python Script which is also captured in a function 
+the bash script above:
 
 ````
     usage:  methylation_extraction.py
