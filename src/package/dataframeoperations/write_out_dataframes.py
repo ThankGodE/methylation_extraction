@@ -1,8 +1,6 @@
 """collection of classses and functions to write dataframes to csv"""
 import logging
 import os.path
-import sys
-from pathlib import Path
 
 import pandas as pd
 
@@ -32,10 +30,9 @@ class DataFrameWriter:
             absolute_path_to_out = os.path.join(path2out_dir, "all_samples_extracted.tsv")
             concatenated_df.to_csv(absolute_path_to_out, sep="\t", index=False, encoding="utf-8")
 
-
     @classmethod
     def __remove_none(cls, dataframe_lists: list) -> list:
         """removes all Nones in list"""
 
-        return [dataframe for dataframe in dataframe_lists if isinstance(dataframe, pd.DataFrame) and
-                 dataframe.empty is False]
+        return [dataframe for dataframe in dataframe_lists if isinstance(dataframe, pd.DataFrame) and dataframe.empty
+                is False]

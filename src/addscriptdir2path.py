@@ -125,7 +125,6 @@ def find_env_var_file(path2runscript_dir: str) -> list:
 
     logging.info(dir_2_put_env_file)
 
-
     assert (
         len(environment_var) > 0
     ), """ a .env file was not found in any of the  parent directories.

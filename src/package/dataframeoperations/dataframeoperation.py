@@ -21,7 +21,7 @@ class DataFrameOperator:
         """add sample name column to an existing dataframe"""
 
         number_rows = get_first_element(reference_dataframe.shape)
-        sample_name_list = [sample_name]*number_rows
+        sample_name_list = [sample_name]*int(number_rows)
 
         sample_name_df = pd.DataFrame({"sample_name": sample_name_list})
 

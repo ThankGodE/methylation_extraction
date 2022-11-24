@@ -1,10 +1,6 @@
 """a collection of classes and methods that read files """
-from _csv import reader
 
 import pandas as pd
-
-from src.package.datastructureoperations.listoperations.listhandlers import get_first_element
-
 
 class FileReader:
     """reads files"""

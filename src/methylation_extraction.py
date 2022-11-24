@@ -12,7 +12,6 @@ Required:
 __author__ = "{ThankGod Ebenezer}"
 
 import os.path
-import sys
 
 # Built-in/generic imports
 
@@ -60,11 +59,11 @@ def main() -> None:
         number_cpus,
     )
 
-    DataFrameWriter.write_dataframe(extracted_methylation_dataframe_df, path_to_out_file )
+    DataFrameWriter.write_dataframe(extracted_methylation_dataframe_df, path_to_out_file)
 
 
 ###################################################################################
-################################# run system argument #############################
+#run system argument ##############################################################
 ###################################################################################
 if __name__ == "__main__":
     main()

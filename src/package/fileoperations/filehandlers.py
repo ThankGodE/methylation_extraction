@@ -4,7 +4,7 @@ A collection of functions that performs file operations within a script.
 
 __name__ = "__main__"
 
-### Built-in functions ###
+# Built-in functions ###
 import os
 import glob
 
@@ -27,7 +27,6 @@ class FileHandler:
             )
 
         return FileHandler.__decode_bom(all_files)
-
 
     @classmethod
     def __decode_bom(cls, all_path2file: list) -> list:

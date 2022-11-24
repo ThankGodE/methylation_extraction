@@ -38,7 +38,7 @@ class ProfileLogger:
         logging.debug(" Memory usage by resource (Mb): {}".format(str(memory_in_mb)))
         logging.debug(" Memory usage by psutil (Mb): {}".format(print_mem()))
 
-        ### logs script activities ###
+        # logs script activities ###
         logging.debug(" Name of script run: {}".format(sys.argv[0].split("/")[-1]))
         logging.debug(" Absolute script path: {}".format(os.path.abspath(sys.argv[0])))
         logging.debug(

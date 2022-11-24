@@ -6,7 +6,6 @@ __name__ = "__main__"
 
 import os
 import pathlib
-import sys
 
 import pandas as pd
 

@@ -4,7 +4,7 @@ A collection of functions that performs tuple handling operations within a scrip
 
 __name__ = "__main__"
 
-### system modules, packages, libraries, and programs ###
+# system modules, packages, libraries, and programs ###
 
 
 def append2tuple(element: tuple, item2append: str) -> tuple:
