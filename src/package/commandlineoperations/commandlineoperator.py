@@ -33,8 +33,8 @@ class CommandLineOperator:
         """gets input arguments from the commandline interface"""
 
         parser = argparse.ArgumentParser(
-            prog="methylation_extraction.py",
-            usage=""" methylation_extraction.py
+            prog="methylation_transformer.py",
+            usage=""" methylation_transformer.py
                     -o path2out """,
             formatter_class=argparse.ArgumentDefaultsHelpFormatter,
             description=(

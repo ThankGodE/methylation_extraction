@@ -1,3 +1,4 @@
 .idea/*
 *.iml
 src/package/dataframeoperations/__pycache__/write_out_dataframes.cpython-36.pyc
+src/package/commandlineoperations/__pycache__/commandlineoperator.cpython-36.pyc
